@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CleanTech Waste Classifier</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>CleanTech: Waste Classifier</h1>
+        <p>Upload an image of waste to classify it as Biodegradable, Recyclable, or Trash.</p>
+    </header>
+
+    <main>
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*" required>
+            <button type="submit">Classify Waste</button>
+        </form>
+    </main>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>This AI-powered tool helps classify waste into appropriate categories to improve recycling and composting efforts.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: support@cleantech.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 CleanTech Waste Management</p>
+    </footer>
+</body>
+</html>
